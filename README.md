@@ -1,2 +1,3 @@
 # devops
-DevOps Script repositories
+DevOps Script repositories for GitHub
+
