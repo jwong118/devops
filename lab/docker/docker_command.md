@@ -37,3 +37,24 @@ docker exec myubuntu cat /etc/lsb-release
 
 # Show the running process
 docker top <container_name>
+
+Dockerfile Example
+cat > Dockerfile <<EOL
+FROM ubuntu:20.04
+
+RUN apt update && apt install nginx -y
+
+ENTRYPOINT ["/bin/bash", "-c"]
+
+CMD ["service nginx start"]
+EOL
+
+#Re-build the image and run the image with the following command
+docker build -t custom-nginx .
+docker rm -f custom-nginx-container
+docker run -d -it --name custom-nginx-container custom-nginx
+docker ps
+
+#Run the same image using a different name (remember --name option?) with a bash towards the end.
+docker run -d --name nginx-one -it custom-nginx bash
+docker ps
