@@ -32,4 +32,7 @@ Miscellaneous Commands
     # kubectl create configmap <name> --from-literal=<key>=<value>
 
 5. Apply changes deficed in a YAML
-    # kubectl appl -f <file.yaml>
+    # kubectl apply -f <file.yaml>
+
+6. Switch namespace
+    # kubectl config set-context --current --namespace=<new-namespace-name>
