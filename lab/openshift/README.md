@@ -9,7 +9,7 @@ A step-by-step guide to spinning up a minimal OpenShift cluster on your local Re
 
 This guide is adapted from [Donald Sebastian Leung's blog](https://donaldsebleung.com/blog/20240114-exploring-openshift-with-crc) and updated specifically for RHEL 10 workflows.
 
-## 📋 Prerequisites
+##Prerequisites
 
 OpenShift is resource-intensive. Ensure your machine meets these minimum requirements before proceeding:
 
@@ -21,7 +21,7 @@ OpenShift is resource-intensive. Ensure your machine meets these minimum require
 
 ---
 
-## 🚀 Installation Guide
+##Installation Guide
 
 ### Step 1: Prepare the RHEL 10 Environment
 RHEL 10 requires specific virtualization tools to manage the cluster. Install `NetworkManager` for connectivity and `libvirt` for VM management.
@@ -130,7 +130,7 @@ oc login -u kubeadmin -p <your-password> https://api.crc.testing:6443
 
 ---
 
-## 🧹 Cleanup
+## Cleanup/Delete Instance
 
 To stop the cluster and reclaim resources:
 
@@ -152,5 +152,6 @@ crc delete
 ```
 
 ```
+
 
 
