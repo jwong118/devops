@@ -98,6 +98,20 @@ Once the terminal displays **"Started the OpenShift cluster"**, you can access i
 * **Developer credentials:** `developer` / `developer`
 * **Admin credentials:** `kubeadmin` / *(password printed in terminal output)*
 
+Remote Access:
+To add an OpenShift console link to a remote Mac's /etc/hosts file, you must map the console's fully qualified domain name (FQDN) to the IP address of your OpenShift cluster (e.g., node or load balancer) by editing the file with sudo privileges. 
+
+Steps to add to /etc/hosts:
+1. Open terminal on your Mac.
+2. Run: sudo nano /etc/hosts
+3. Add a line at the bottom: <SERVER_IP_ADDRESS> console-openshift-console.apps.<cluster_name>.<base_domain>.
+4. Save and exit (Ctrl+O, Enter, Ctrl+X). 
+
+Example Scenario (CodeReady Containers/Local):
+If your remote IP is 192.168.1.50 and the app domain is apps-crc.testing, add:
+192.168.1.50 console-openshift-console.apps-crc.testing
+192.168.1.50 oauth-openshift.apps-crc.testing 
+
 #### Command Line (`oc`)
 
 Configure your shell environment to use the cached `oc` binary:
@@ -138,3 +152,4 @@ crc delete
 ```
 
 ```
+
