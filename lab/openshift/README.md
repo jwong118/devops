@@ -124,7 +124,7 @@ eval $(crc oc-env)
 Login as administrator:
 
 ```bash
-oc login -u kubeadmin -p <your-password> [https://api.crc.testing:6443](https://api.crc.testing:6443)
+oc login -u kubeadmin -p <your-password> https://api.crc.testing:6443
 
 ```
 
@@ -152,4 +152,5 @@ crc delete
 ```
 
 ```
+
 
